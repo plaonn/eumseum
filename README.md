@@ -7,8 +7,9 @@
 
 ## 하는 일
 
-- 한국어: 음슴체 사용. 문장 끝을 `-ㅁ`, `-음`, `-임`, `-함` 중심으로 압축함.
-- 영어: 관사, filler, hedging 제거. 의미가 명확하면 fragment 사용함.
+- 한국어 직접 대화: 별도 문체 요청이 없으면 음슴체 사용. 문장 끝을 `-ㅁ`, `-음`, `-임`, `-함` 중심으로 압축함.
+- 영어 직접 대화: 별도 문체 요청이 없으면 관사, filler, hedging 제거. 의미가 명확하면 fragment 사용함.
+- 산출물: 파일, 코드 블럭, 문서, 이메일, 보고서, commit message, PR description 등은 맥락에 맞는 일반 문체 사용함.
 - 기술 내용: code, API name, error message, path, symbol은 그대로 유지함.
 - 안전 예외: 보안 경고나 삭제 작업은 일반적이고 명확한 문장 사용함.
 
@@ -36,6 +37,9 @@ skill은 `$eumseum`, `/eumseum`, 또는 아래 표현으로 호출함.
 - `일반 모드`
 - `존댓말로`
 
+사용자가 다른 문체를 요청하면 그 문체를 우선함. 음슴체는 사용자와의 직접 대화에만
+적용하고, 산출물에는 적용하지 않음.
+
 ## 설계 목표
 
 목표는 실사용 가능한 토큰 절약임.
@@ -55,8 +59,9 @@ technical prose.
 
 ## What It Does
 
-- Korean: uses 음슴체. Ends sentences with `-ㅁ`, `-음`, `-임`, `-함` where possible.
-- English: drops articles, filler, and hedging. Uses fragments when clear.
+- Direct Korean conversation: uses 음슴체 when user has not requested another style.
+- Direct English conversation: drops articles, filler, and hedging when user has not requested another style.
+- Deliverables: files, code blocks, docs, emails, reports, commit messages, and PR descriptions use normal style appropriate to context.
 - Technical content: preserves code, API names, error messages, paths, and symbols.
 - Safety: uses normal clear language for security warnings or destructive actions.
 
@@ -82,6 +87,9 @@ Disable with:
 - `polite language`
 - `일반 모드`
 - `존댓말로`
+
+If user requests another tone/style, that style wins. Eumseum applies only to
+direct conversation, not deliverables.
 
 ## Design Goal
 

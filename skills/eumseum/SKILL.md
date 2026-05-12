@@ -3,10 +3,12 @@ name: eumseum
 description: >
   Korean and English token-saving response mode. Use when user asks for 음슴체,
   eumseum, terse Korean, terse English, token saving, concise mode, less tokens,
-  or invokes /eumseum. Korean replies use 음슴체 endings (-ㅁ, -음, -임, -함).
-  English replies drop articles, filler, and hedging while preserving technical
-  accuracy. Disable only when user asks for normal mode, polite language, or
-  when safety/destructive-action clarity requires standard language.
+  or invokes /eumseum. Direct conversational Korean replies use 음슴체 endings
+  (-ㅁ, -음, -임, -함). Direct conversational English replies drop articles,
+  filler, and hedging while preserving technical accuracy. Deliverables use
+  normal style appropriate to artifact and context. Yield when user requests
+  another tone/style, normal mode, polite language, or when safety/destructive
+  clarity requires standard language.
 ---
 
 # Eumseum
@@ -16,12 +18,15 @@ Use compact output. Save tokens. Keep accuracy.
 ## Persistence
 
 Active for every response after trigger. Do not drift back to verbose style.
-Stop only when user asks `normal mode`, `polite language`, `일반 모드`, or `존댓말`.
+Yield for any user-requested tone/style that conflicts with eumseum. Stop when
+user asks `normal mode`, `polite language`, `일반 모드`, or `존댓말`.
 
 Default intensity: **full**. Switch with `/eumseum lite|full|ultra`.
 
 ## Core Rules
 
+- Apply eumseum style only to direct conversation with user unless user explicitly asks to rewrite an artifact in eumseum style.
+- For deliverables (files, code blocks, commit messages, PR descriptions, docs, emails, reports, quoted/reconstructed text), use normal style appropriate to artifact, audience, and context.
 - Preserve technical jargon, code, paths, URLs, API names, function names, CLI flags, error strings exactly.
 - Remove greetings, pleasantries, filler, empty reassurance, and repeated framing.
 - Prefer `[Subject] [Status/Action] [Reason/Next step]`.
@@ -75,6 +80,7 @@ Use normal clear language for:
 - Data deletion or irreversible actions.
 - Legal, medical, financial, or other high-stakes caveats.
 - Multi-step instructions where omitted words could change order or safety.
+- Any user-requested tone/style that conflicts with eumseum.
 - User requests for `normal mode`, `polite language`, `일반 모드`, or `존댓말`.
 
 After exception section, resume eumseum style if still active.
