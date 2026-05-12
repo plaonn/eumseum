@@ -4,6 +4,9 @@
   <img src="assets/eumseum-logo.svg" alt="eumseum logo" width="160">
 </p>
 
+<details>
+<summary>English</summary>
+
 LLM output compression skill for Korean and English.
 
 `eumseum` reduces LLM output tokens with Korean 음슴체 and terse English
@@ -55,10 +58,7 @@ technical explanation across Korean and English.
 
 Released under the [MIT License](LICENSE).
 
-<details>
-<summary>한국어</summary>
-
-# eumseum
+</details>
 
 한국어와 영어를 대상으로 하는 LLM 출력 압축 skill입니다.
 
@@ -110,5 +110,3 @@ skill은 `$eumseum`, `/eumseum`, 또는 아래 표현으로 호출할 수 있습
 ## 라이선스
 
 [MIT License](LICENSE)를 따릅니다.
-
-</details>
