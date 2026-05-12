@@ -1,0 +1,20 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">eumseum logo</title>
+  <desc id="desc">Circular black logo with white Korean text reading 음슴체.</desc>
+  <defs>
+    <radialGradient id="bg" cx="35%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#222222"/>
+      <stop offset="62%" stop-color="#111111"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </radialGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <circle cx="256" cy="256" r="220" fill="url(#bg)" filter="url(#softShadow)"/>
+  <g fill="#F8F8F5" font-family="NanumMyeongjoOTF, Nanum Myeongjo, AppleMyungjo, serif" font-weight="700">
+    <text x="128" y="238" font-size="116" letter-spacing="-6">음슴</text>
+    <text x="257" y="343" font-size="116" letter-spacing="-6">체</text>
+  </g>
+  <path d="M374 147L385 176L414 187L385 198L374 227L363 198L334 187L363 176L374 147Z" fill="#B8AA8A"/>
+</svg>
