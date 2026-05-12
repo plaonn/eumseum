@@ -51,6 +51,10 @@ skill은 `$eumseum`, `/eumseum`, 또는 아래 표현으로 호출할 수 있습
 코딩, 분석, 리뷰, 디버깅, 기술 설명에서 정확도는 유지하고 출력 토큰만 줄이는 것을
 목표로 합니다.
 
+## 라이선스
+
+[MIT License](LICENSE)를 따릅니다.
+
 <details>
 <summary>English</summary>
 
@@ -101,5 +105,9 @@ Goal is practical token reduction.
 
 Keep accuracy. Reduce output tokens for coding, analysis, review, debugging, and
 technical explanation across Korean and English.
+
+## License
+
+Released under the [MIT License](LICENSE).
 
 </details>
